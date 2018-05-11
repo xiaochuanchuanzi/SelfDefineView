@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--自定义销控图-->
+        <activity android:name=".xiaokongtu.XiaoKongTuActivity"/>
     </application>
 
 </manifest>

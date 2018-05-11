@@ -3,4 +3,66 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black2">#313946</color>
+    <color name="btn_blue_normal">#ff1da5fb</color>
+    <color name="gray">#d9d8d8</color>
+    <color name="red_oa">#ff575e</color>
+
+
+    <color name="green_qb">#01a699</color>
+    <color name="yellow_qb">#ffc310</color>
+    <color name="brown_qb">#daa467</color>
+    <color name="brown_touming_qb">#aadaa467</color>
+
+    <!--背景色-->
+    <color name="bg_gray">#e8e8e8</color>
+    <color name="main_bg">#f8f8f8</color>
+    <color name="bg_nonet">#FFE2E2</color>
+    <color name="bg_black2">#66000000</color>
+    <color name="bg_black">#50000000</color>
+    <color name="bg_yellow">#e2dfda</color>
+
+    <!--分割线-->
+    <color name="line_center">#eeeeee</color>
+
+    <!--文字颜色-->
+    <color name="default_text">#333333</color>
+    <color name="word_gray">#333333</color>
+    <color name="word_gray2">#505050</color>
+    <color name="word_gray4">#888888</color>
+    <color name="word_gray6">#cccccc</color>
+
+
+    <!--透明色-->
+    <color name="toumingse">#00000000</color>
+    <color name="toumingse2">#f0ffffff</color>
+    <color name="toumingse3">#66ffffff</color>
+
+    <color name="tab_pressed_color">@color/brown_qb</color>
+    <color name="tab_normal_color">@color/word_gray4</color>
+
+    <!--oa-->
+    <color name="dropdown_menu_bg_color">#66000000</color>
+    <color name="white_press">#f1f1f3</color>
+
+    <!--阿里聊天-->
+
+    <!--扫一扫-->
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+
+
+    <!--CardView-->
+    <color name="cardview_dark_background">#FFFFFF</color>
+    <color name="cardview_light_background">#FFFFFF</color>
+    <color name="cardview_shadow_end_color">#00000000</color>
+    <color name="cardview_shadow_start_color">#20000000</color>
+
+
+    <color name="navpage">#FFE1E8EB</color>
 </resources>
