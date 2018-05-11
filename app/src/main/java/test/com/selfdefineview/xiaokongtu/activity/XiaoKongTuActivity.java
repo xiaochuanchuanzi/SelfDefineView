@@ -1,4 +1,4 @@
-package test.com.selfdefineview.xiaokongtu;
+package test.com.selfdefineview.xiaokongtu.activity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -10,6 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import test.com.selfdefineview.R;
+import test.com.selfdefineview.xiaokongtu.LeftAndTop;
+import test.com.selfdefineview.xiaokongtu.LeftScrollView;
+import test.com.selfdefineview.xiaokongtu.MapsCature;
+import test.com.selfdefineview.xiaokongtu.SelfGroup;
+import test.com.selfdefineview.xiaokongtu.SelfTextView;
+import test.com.selfdefineview.xiaokongtu.TopScrollView;
 import test.com.selfdefineview.xiaokongtu.entity.PctureHouseTypes;
 import test.com.selfdefineview.xiaokongtu.entity.PictureBuild;
 import test.com.selfdefineview.xiaokongtu.entity.PictureHouse;

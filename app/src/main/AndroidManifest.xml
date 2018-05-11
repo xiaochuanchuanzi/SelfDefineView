@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <!--自定义销控图-->
-        <activity android:name=".xiaokongtu.XiaoKongTuActivity"/>
+        <activity android:name=".xiaokongtu.activity.XiaoKongTuActivity"/>
+        <!--自定义销控图2-->
+        <activity android:name=".xiaokongtu.activity.XiaoKongTu2Activity"/>
     </application>
 
 </manifest>
