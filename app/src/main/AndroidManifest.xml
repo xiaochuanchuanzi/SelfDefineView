@@ -20,6 +20,8 @@
         <activity android:name=".xiaokongtu.activity.XiaoKongTuActivity"/>
         <!--自定义销控图2-->
         <activity android:name=".xiaokongtu.activity.XiaoKongTu2Activity"/>
+        <!--ConstraintLayout的学习-->
+        <activity android:name=".constraintlayout.ConstraintActivity"/>
     </application>
 
 </manifest>
