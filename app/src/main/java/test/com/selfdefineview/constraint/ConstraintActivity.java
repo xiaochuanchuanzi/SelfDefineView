@@ -40,12 +40,12 @@ public class ConstraintActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()){
                     case MotionEvent.ACTION_DOWN:
-                        dx = event.getRawX();
-                        dy = event.getRawY();
+                        dx = event.getX();
+                        dy = event.getY();
                         break;
                     case MotionEvent.ACTION_MOVE:
                         view.setX(event.getRawX() - dx);
-                        view.setY(event.getRawY()- dy - getStatusBarHeight() - getTitleBarHeight());
+                        view.setY(event.getRawY()- dy - getStatusBarHeight() - getTitleBarHeight() - view.getHeight()/2);
                         break;
                 }
                 return true;
