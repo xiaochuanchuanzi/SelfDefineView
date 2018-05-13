@@ -44,10 +44,8 @@ public class ConstraintActivity extends AppCompatActivity {
                         dy = event.getRawY();
                         break;
                     case MotionEvent.ACTION_MOVE:
-                        /*view.setX(event.getRawX() - dx);
-                        view.setY(event.getRawY()- dy - getStatusBarHeight() - getTitleBarHeight());*/
                         view.setX(event.getRawX() - dx);
-                        view.setY(event.getRawY()- dy);
+                        view.setY(event.getRawY()- dy - getStatusBarHeight() - getTitleBarHeight());
                         break;
                 }
                 return true;
