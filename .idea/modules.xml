@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\Adroid\WorkSpace\selfdefineview\app\app.iml" filepath="E:\Adroid\WorkSpace\selfdefineview\app\app.iml" />
       <module fileurl="file://E:\Adroid\WorkSpace\selfdefineview\chuanSpace.iml" filepath="E:\Adroid\WorkSpace\selfdefineview\chuanSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/selfdefineview.iml" filepath="$PROJECT_DIR$/selfdefineview.iml" />
     </modules>

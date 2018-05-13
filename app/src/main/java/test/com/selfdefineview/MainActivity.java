@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import test.com.selfdefineview.constraintlayout.ConstraintActivity;
+import test.com.selfdefineview.constraint.ConstraintActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
 

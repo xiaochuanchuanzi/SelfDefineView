@@ -1,7 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+    android:id="@+id/activity_main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="test.com.selfdefineview.constraint.ConstraintActivity">
+    <TextView
+        android:id="@+id/head_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="这是头部"
+        android:background="@color/brown_qb"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintDimensionRatio="16:5"/>
+    <TextView
+        android:id="@+id/headImage"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"
+        android:layout_width="140dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="这是图片"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/yellow_qb"/>
+    <TextView
+        android:id="@+id/headText"
+        android:text="为什么会走到现在的地步，即使以后我们没有未来，我也希望我们会有未来，我真的很爱你其爱的"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/headImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/headImage"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="8dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="8分钟前"
+        android:gravity="left"
+        android:background="@color/gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/headImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/headImage"
+        android:layout_marginLeft="8dp"/>
+
+    <!--底部导航栏tab-->
+    <!--可通过layout_constraintHorizontal_weight属性进行占比的调整-->
+    <TextView
+        android:id="@+id/tab1"
+        android:gravity="center"
+        android:text="tab1"
+        android:background="@color/bg_gray"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toLeftOf="@+id/tab2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/tab2"
+        android:gravity="center"
+        android:text="tab2"
+        android:background="@color/yellow_qb"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/tab1"
+        app:layout_constraintRight_toLeftOf="@+id/tab3"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:id="@+id/tab3"
+        android:gravity="center"
+        android:text="tab3"
+        android:background="@color/red_oa"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/tab2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    
+    <TextView
+        android:onClick="floatBtton"
+        android:background="@color/tab_pressed_color"
+        android:gravity="center"
+        android:text="我是浮动的"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.9"/>
 
 </android.support.constraint.ConstraintLayout>
