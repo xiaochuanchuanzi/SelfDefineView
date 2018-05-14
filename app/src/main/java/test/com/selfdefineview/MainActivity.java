@@ -36,10 +36,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 点击进入销控图--自定义View组合---在一个View内实现
+     * 点击进入ConstraintLayout的学习,减少嵌套层级,实现布局优化
      * @param view
      */
     public void enterXiaoKongtu3(View view){
+        Intent intent = new Intent(MainActivity.this, ConstraintActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入CoordinatorLayout的学习页面
+     * @param view
+     */
+    public void enterXiaoKongtu4(View view){
         Intent intent = new Intent(MainActivity.this, ConstraintActivity.class);
         startActivity(intent);
     }

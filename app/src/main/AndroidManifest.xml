@@ -22,6 +22,8 @@
         <activity android:name=".xiaokongtu.activity.XiaoKongTu2Activity"/>
         <!--ConstraintLayout的学习-->
         <activity android:name=".constraint.ConstraintActivity"/>
+        <!--CoordinatorLayout的学习使用-->
+        <activity android:name=".coordinate.CoordinateActivity"/>
     </application>
 
 </manifest>
