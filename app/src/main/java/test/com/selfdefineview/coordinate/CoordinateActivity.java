@@ -8,6 +8,7 @@ import test.com.selfdefineview.R;
 
 /**
  * Created by zhangsixia on 18/5/14.
+ * CoordinateLayout是用于协调子View之间的协作关系的
  */
 
 public class CoordinateActivity extends AppCompatActivity {

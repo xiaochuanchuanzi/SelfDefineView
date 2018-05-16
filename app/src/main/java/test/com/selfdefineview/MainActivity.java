@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import test.com.selfdefineview.constraint.ConstraintActivity;
+import test.com.selfdefineview.coordinate.CoordinateActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void enterXiaoKongtu4(View view){
-        Intent intent = new Intent(MainActivity.this, ConstraintActivity.class);
+        Intent intent = new Intent(MainActivity.this, CoordinateActivity.class);
         startActivity(intent);
     }
 }
