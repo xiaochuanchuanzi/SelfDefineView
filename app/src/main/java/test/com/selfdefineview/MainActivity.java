@@ -7,6 +7,7 @@ import android.view.View;
 
 import test.com.selfdefineview.constraint.ConstraintActivity;
 import test.com.selfdefineview.coordinate.CoordinateActivity;
+import test.com.selfdefineview.wifi.WifiActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
 
@@ -51,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void enterXiaoKongtu4(View view){
         Intent intent = new Intent(MainActivity.this, CoordinateActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入CoordinatorLayout的学习页面
+     * @param view
+     */
+    public void enterXiaoKongtu5(View view){
+        Intent intent = new Intent(MainActivity.this, WifiActivity.class);
         startActivity(intent);
     }
 }
