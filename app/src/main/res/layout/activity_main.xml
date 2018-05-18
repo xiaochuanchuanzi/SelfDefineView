@@ -37,7 +37,7 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu3"
-            android:text="ConstraintLayout"
+            android:text="Constraint"
             android:textColor="@color/black"
             android:textSize="13dp" />
 
@@ -47,7 +47,7 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu4"
-            android:text="CoordinateLayout"
+            android:text="Coordinator"
             android:textColor="@color/black"
             android:textSize="13dp" />
         <TextView
@@ -56,7 +56,7 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu5"
-            android:text="Wifi_activity"
+            android:text="WIFI列表"
             android:textColor="@color/black"
             android:textSize="13dp" />
     </LinearLayout>
