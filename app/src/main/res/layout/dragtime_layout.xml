@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <test.com.selfdefineview.dragtime.ZFTimeLine
+        android:id="@+id/scalePanel"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+    </test.com.selfdefineview.dragtime.ZFTimeLine>
+
+</android.support.constraint.ConstraintLayout>

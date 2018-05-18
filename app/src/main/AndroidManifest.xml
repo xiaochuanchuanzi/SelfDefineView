@@ -36,6 +36,8 @@
         <activity android:name=".coordinate.CoordinateActivity"/>
         <!--WIFI页面-->
         <activity android:name=".wifi.WifiActivity"/>
+        <!--拖动时间选择页面-->
+        <activity android:name=".dragtime.DragTimeActivity"/>
     </application>
 
 </manifest>

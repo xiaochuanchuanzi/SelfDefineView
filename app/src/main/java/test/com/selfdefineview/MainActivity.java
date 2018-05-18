@@ -11,6 +11,7 @@ import android.view.View;
 
 import test.com.selfdefineview.constraint.ConstraintActivity;
 import test.com.selfdefineview.coordinate.CoordinateActivity;
+import test.com.selfdefineview.dragtime.DragTimeActivity;
 import test.com.selfdefineview.wifi.WifiActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
@@ -73,7 +74,15 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void enterXiaoKongtu6(View view){
-        Intent intent = new Intent(MainActivity.this, WifiActivity.class);
+        openApp();
+    }
+
+    /**
+     * 点击进入拖动时间选择页面
+     * @param view
+     */
+    public void enterXiaoKongtu7(View view){
+        Intent intent = new Intent(MainActivity.this, DragTimeActivity.class);
         startActivity(intent);
     }
 

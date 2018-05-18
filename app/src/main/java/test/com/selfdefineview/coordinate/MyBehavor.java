@@ -30,17 +30,18 @@ public class MyBehavor extends CoordinatorLayout.Behavior<TextView> {
     @Override
     public boolean onDependentViewChanged(CoordinatorLayout parent, TextView child, View dependency) {
         //根据dependency的位置，设置child的位置
-       /* int top = dependency.getTop();
+        child.setX(dependency.getX()+200);
+        child.setY(dependency.getY()+200);
+        return true;
+        /* int top = dependency.getTop();
         int left = dependency.getLeft();
         int x = screenWidth - left - child.getWidth();
         int y = top - 800;
         setPosition(child, x, y);
         return true;*/
-        child.setX(dependency.getX()+200);
-        child.setY(dependency.getY()+200);
-        return true;
-
     }
+
+
     private void setPosition(View v, int x, int y) {
         CoordinatorLayout.MarginLayoutParams layoutParams = (CoordinatorLayout.MarginLayoutParams) v.getLayoutParams();
         layoutParams.leftMargin = x;

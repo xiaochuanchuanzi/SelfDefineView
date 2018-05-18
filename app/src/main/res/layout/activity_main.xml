@@ -68,6 +68,15 @@
             android:text="WIFI列表"
             android:textColor="@color/black"
             android:textSize="13dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:onClick="enterXiaoKongtu7"
+            android:text="拖动时间"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
