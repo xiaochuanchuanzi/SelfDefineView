@@ -12,28 +12,33 @@ import android.widget.TextView;
  * Created by 立涛 on 2018/5/14.
  */
 
-public class MyBehavor extends CoordinatorLayout.Behavior {
-    private int width;
+public class MyBehavor extends CoordinatorLayout.Behavior<TextView> {
 
+    private int screenWidth;
     public MyBehavor(Context context, AttributeSet attrs) {
         super(context, attrs);
         DisplayMetrics display = context.getResources().getDisplayMetrics();
-        width = display.widthPixels;
+        screenWidth = display.widthPixels;
     }
 
     @Override
-    public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
-        return dependency instanceof TextView;
+    public boolean layoutDependsOn(CoordinatorLayout parent, TextView child, View dependency) {
+        //返回false表示child不依赖dependency，ture表示依赖
+        return dependency instanceof Button;
     }
 
     @Override
-    public boolean onDependentViewChanged(CoordinatorLayout parent, View child, View dependency) {
-        int top = dependency.getTop();
-        int left = dependency.getLeft();
-        int x = width - left - child.getWidth();
-        int y = top;
-        setPosition(child, x, y);
+    public boolean onDependentViewChanged(CoordinatorLayout parent, TextView child, View dependency) {
+        //根据dependency的位置，设置child的位置
+        child.setX(dependency.getX()+200);
+        child.setY(dependency.getY()+200);
         return true;
+        /* int top = dependency.getTop();
+        int left = dependency.getLeft();
+        int x = screenWidth - left - child.getWidth();
+        int y = top - 800;
+        setPosition(child, x, y);
+        return true;*/
     }
 
     private void setPosition(View v, int x, int y) {
