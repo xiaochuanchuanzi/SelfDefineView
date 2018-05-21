@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import test.com.selfdefineview.cardview.CardActivity;
 import test.com.selfdefineview.constraint.ConstraintActivity;
 import test.com.selfdefineview.coordinate.CoordinateActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
@@ -84,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void enterXiaoKongtu7(View view){
         Intent intent = new Intent(MainActivity.this, DragTimeActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入拖动时间选择页面
+     * @param view
+     */
+    public void enterXiaoKongtu8(View view){
+        Intent intent = new Intent(MainActivity.this, CardActivity.class);
         startActivity(intent);
     }
 
