@@ -47,11 +47,7 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu4"
-<<<<<<< HEAD
             android:text="Coordinate"
-=======
-            android:text="Coordinator"
->>>>>>> 2736c1568d8394e3a4f6a9e2f64572ee19c0c978
             android:textColor="@color/black"
             android:textSize="13dp" />
         <TextView
@@ -60,9 +56,6 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu5"
-<<<<<<< HEAD
-            android:text="Wifi"
-=======
             android:text="WIFI列表"
             android:textColor="@color/black"
             android:textSize="13dp" />
@@ -82,7 +75,6 @@
             android:gravity="center"
             android:onClick="enterXiaoKongtu7"
             android:text="拖动时间"
->>>>>>> 2736c1568d8394e3a4f6a9e2f64572ee19c0c978
             android:textColor="@color/black"
             android:textSize="13dp" />
     </LinearLayout>
