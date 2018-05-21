@@ -37,7 +37,7 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu3"
-            android:text="ConstraintLayout"
+            android:text="Constraint"
             android:textColor="@color/black"
             android:textSize="13dp" />
 
@@ -47,7 +47,16 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu4"
-            android:text="ConstraintLayout"
+            android:text="Coordinate"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:onClick="enterXiaoKongtu5"
+            android:text="Wifi"
             android:textColor="@color/black"
             android:textSize="13dp" />
     </LinearLayout>

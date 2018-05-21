@@ -4,4 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="点击我"
+        android:background="@color/gray"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="我是button"
+        android:background="@color/gray"/>
+
 </android.support.design.widget.CoordinatorLayout>
