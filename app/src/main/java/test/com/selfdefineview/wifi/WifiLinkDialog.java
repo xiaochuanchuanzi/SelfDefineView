@@ -18,8 +18,8 @@ import test.com.selfdefineview.R;
 
 /**
  * Created by John on 2017/4/7.
+ * Dialog编辑框
  */
-
 public class WifiLinkDialog extends Dialog implements View.OnClickListener{
     private TextView text_name;
     private EditText password_edit;
@@ -31,9 +31,9 @@ public class WifiLinkDialog extends Dialog implements View.OnClickListener{
 
     public WifiLinkDialog(@NonNull Context context, @StyleRes int themeResId, String text_nameString, String capabilities) {
         super(context, themeResId);
+        this.mContext = context;
         this.text_nameString = text_nameString;
         this.capabilities = capabilities;
-        mContext = context;
     }
 
     @Override

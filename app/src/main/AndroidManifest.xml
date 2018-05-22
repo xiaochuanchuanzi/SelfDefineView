@@ -34,12 +34,14 @@
         <activity android:name=".constraint.ConstraintActivity"/>
         <!--CoordinatorLayout的学习使用-->
         <activity android:name=".coordinate.CoordinateActivity"/>
-        <!--CoordinatorLayout酷炫页面-->
-        <activity android:name=".coordinate.CoordinatorActivity"/>
         <!--WIFI页面-->
         <activity android:name=".wifi.WifiActivity"/>
         <!--拖动时间选择页面-->
         <activity android:name=".dragtime.DragTimeActivity"/>
+        <!--CardView页面-->
+        <activity android:name=".cardview.CardActivity"/>
+        <!--Excel表格-->
+        <activity android:name=".excel.ExcelActivity"/>
     </application>
 
 </manifest>

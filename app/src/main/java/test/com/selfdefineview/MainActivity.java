@@ -9,10 +9,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import test.com.selfdefineview.cardview.CardActivity;
 import test.com.selfdefineview.constraint.ConstraintActivity;
 import test.com.selfdefineview.coordinate.CoordinateActivity;
-import test.com.selfdefineview.coordinate.CoordinatorActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
+import test.com.selfdefineview.excel.ExcelActivity;
 import test.com.selfdefineview.wifi.WifiActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
 
     /**
      * 点击进入销控图--自定义View组合
@@ -62,15 +64,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 点击进入CoordinatorLayout酷炫页面
-     * @param view
-     */
-    public void enterXiaoKongtu42(View view){
-        Intent intent = new Intent(MainActivity.this, CoordinatorActivity.class);
-        startActivity(intent);
-    }
-
-    /**
      * 点击进入CoordinatorLayout的学习页面
      * @param view
      */
@@ -93,6 +86,23 @@ public class MainActivity extends AppCompatActivity {
      */
     public void enterXiaoKongtu7(View view){
         Intent intent = new Intent(MainActivity.this, DragTimeActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入拖动时间选择页面
+     * @param view
+     */
+    public void enterXiaoKongtu8(View view){
+        Intent intent = new Intent(MainActivity.this, CardActivity.class);
+        startActivity(intent);
+    }
+    /**
+     * 点击进入EXCEL表格页面
+     * @param view
+     */
+    public void enterXiaoKongtu9(View view){
+        Intent intent = new Intent(MainActivity.this, ExcelActivity.class);
         startActivity(intent);
     }
 

@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Created by zhangsixia on 18/5/18.
+ * Created by 立涛 on 2018/5/14.
  */
 
 public class MyBehavor extends CoordinatorLayout.Behavior<TextView> {
@@ -41,12 +41,10 @@ public class MyBehavor extends CoordinatorLayout.Behavior<TextView> {
         return true;*/
     }
 
-
     private void setPosition(View v, int x, int y) {
         CoordinatorLayout.MarginLayoutParams layoutParams = (CoordinatorLayout.MarginLayoutParams) v.getLayoutParams();
         layoutParams.leftMargin = x;
         layoutParams.topMargin = y;
         v.setLayoutParams(layoutParams);
     }
-
 }

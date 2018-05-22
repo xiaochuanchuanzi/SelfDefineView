@@ -10,40 +10,33 @@ import android.text.TextUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ${GuoZhaoHui} on 2017/11/27.
- * Email:guozhaohui628@gmail.com
- */
-
 public class WifiSupport {
 
     private static final String TAG = "WifiSupport";
-
+    //WIFI类型
     public enum WifiCipherType {
         WIFICIPHER_WEP, WIFICIPHER_WPA, WIFICIPHER_NOPASS, WIFICIPHER_INVALID
     }
 
-    public WifiSupport() {
-
-    }
-
+    public WifiSupport() {}
+    //获取范围内的WIFI列表信息
     public static List<ScanResult> getWifiScanResult(Context context) {
         boolean b = context == null;
         return ((WifiManager) context.getSystemService(Context.WIFI_SERVICE)).getScanResults();
     }
-
+    //判断WIFI是否可用
     public static boolean isWifiEnable(Context context) {
         return ((WifiManager) context.getSystemService(Context.WIFI_SERVICE)).isWifiEnabled();
     }
-
+    //获取已连接的WIFI信息
     public static WifiInfo getConnectedWifiInfo(Context context) {
         return ((WifiManager) context.getSystemService(Context.WIFI_SERVICE)).getConnectionInfo();
     }
-
+    //获取WIFI配置信息
     public static List getConfigurations(Context context) {
         return ((WifiManager) context.getSystemService(Context.WIFI_SERVICE)).getConfiguredNetworks();
     }
-
+    //配置WIFI信息
     public static WifiConfiguration createWifiConfig(String SSID, String password, WifiCipherType type) {
         WifiConfiguration config = new WifiConfiguration();
         config.allowedAuthAlgorithms.clear();
@@ -52,7 +45,6 @@ public class WifiSupport {
         config.allowedPairwiseCiphers.clear();
         config.allowedProtocols.clear();
         config.SSID = "\"" + SSID + "\"";
-
         if (type == WifiCipherType.WIFICIPHER_NOPASS) {
 //            config.wepKeys[0] = "";  //注意这里
             config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
