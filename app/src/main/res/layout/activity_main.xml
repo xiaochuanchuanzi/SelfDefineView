@@ -50,6 +50,16 @@
             android:text="Coordinator"
             android:textColor="@color/black"
             android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:onClick="enterXiaoKongtu42"
+            android:text="Coordinator2"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
         <TextView
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -65,7 +75,7 @@
             android:background="@color/gray"
             android:gravity="center"
             android:onClick="enterXiaoKongtu6"
-            android:text="WIFI列表"
+            android:text="App跳转"
             android:textColor="@color/black"
             android:textSize="13dp" />
         <TextView
