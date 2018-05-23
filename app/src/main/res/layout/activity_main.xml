@@ -56,6 +56,16 @@
             android:layout_height="50dp"
             android:background="@color/gray"
             android:gravity="center"
+            android:onClick="enterXiaoKongtu10"
+            android:text="Coordinator"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/gray"
+            android:gravity="center"
             android:onClick="enterXiaoKongtu5"
             android:text="WIFI列表"
             android:textColor="@color/black"

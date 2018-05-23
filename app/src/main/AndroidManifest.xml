@@ -21,7 +21,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -33,6 +32,12 @@
         <activity android:name=".constraint.ConstraintActivity"/>
         <!--CoordinatorLayout的学习使用-->
         <activity android:name=".coordinate.CoordinateActivity"/>
+        <!--CoordinatorLayout的学习使用-->
+        <activity android:name=".coordinate.CoordinatorActivity"
+            android:theme="@style/AppThemes"/><!--覆盖app中的Theme主题-->
+        <!--PaletteDetailActivity页面-->
+        <activity android:name=".coordinate.PaletteDetailActivity"
+            android:theme="@style/AppThemes"/><!--覆盖app中的Theme主题-->
         <!--WIFI页面-->
         <activity android:name=".wifi.WifiActivity"/>
         <!--拖动时间选择页面-->

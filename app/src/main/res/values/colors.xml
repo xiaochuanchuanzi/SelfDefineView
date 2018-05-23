@@ -10,6 +10,12 @@
     <color name="gray">#d9d8d8</color>
     <color name="red_oa">#ff575e</color>
 
+    <color name="blue">#3F51B5</color>
+    <color name="blue_dark">#303F9F</color>
+
+    <color name="red">#FF4081</color>
+
+    <color name="transparent">#0000</color>
 
     <color name="green_qb">#01a699</color>
     <color name="yellow_qb">#ffc310</color>

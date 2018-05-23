@@ -12,6 +12,7 @@ import android.view.View;
 import test.com.selfdefineview.cardview.CardActivity;
 import test.com.selfdefineview.constraint.ConstraintActivity;
 import test.com.selfdefineview.coordinate.CoordinateActivity;
+import test.com.selfdefineview.coordinate.CoordinatorActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
 import test.com.selfdefineview.excel.ExcelActivity;
 import test.com.selfdefineview.wifi.WifiActivity;
@@ -51,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void enterXiaoKongtu3(View view){
         Intent intent = new Intent(MainActivity.this, ConstraintActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入CoordinatorLayout的学习页面
+     * @param view
+     */
+    public void enterXiaoKongtu10(View view){
+        Intent intent = new Intent(MainActivity.this, CoordinatorActivity.class);
         startActivity(intent);
     }
 
