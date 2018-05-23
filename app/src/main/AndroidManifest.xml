@@ -46,6 +46,13 @@
         <activity android:name=".cardview.CardActivity"/>
         <!--Excel表格-->
         <activity android:name=".excel.ExcelActivity"/>
+        <!--CollapseActivity页面-->
+        <activity android:name=".collapse.CollapseActivity"/>
+        <!--TextInputActivity页面-->
+        <activity android:name=".textinputlayout.TextInputActivity"
+             android:theme="@style/AppThemes"/><!--覆盖app中的Theme主题-->
+        <!--底部导航栏BottomNavigationActivity-->
+        <activity android:name=".bottomnavigationview.BottomNavigationActivity"/>
     </application>
 
 </manifest>

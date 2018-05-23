@@ -9,12 +9,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import test.com.selfdefineview.bottomnavigationview.BottomNavigationActivity;
 import test.com.selfdefineview.cardview.CardActivity;
+import test.com.selfdefineview.collapse.CollapseActivity;
 import test.com.selfdefineview.constraint.ConstraintActivity;
 import test.com.selfdefineview.coordinate.CoordinateActivity;
 import test.com.selfdefineview.coordinate.CoordinatorActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
 import test.com.selfdefineview.excel.ExcelActivity;
+import test.com.selfdefineview.textinputlayout.TextInputActivity;
 import test.com.selfdefineview.wifi.WifiActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
@@ -113,6 +116,33 @@ public class MainActivity extends AppCompatActivity {
      */
     public void enterXiaoKongtu9(View view){
         Intent intent = new Intent(MainActivity.this, ExcelActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入Collapse页面
+     * @param view
+     */
+    public void enterXiaoKongtu11(View view){
+        Intent intent = new Intent(MainActivity.this, CollapseActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入登陆页面
+     * @param view
+     */
+    public void enterXiaoKongtu12(View view){
+        Intent intent = new Intent(MainActivity.this, TextInputActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入底部导航栏页面
+     * @param view
+     */
+    public void enterXiaoKongtu13(View view){
+        Intent intent = new Intent(MainActivity.this, BottomNavigationActivity.class);
         startActivity(intent);
     }
 
