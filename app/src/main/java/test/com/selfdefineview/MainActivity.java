@@ -18,6 +18,7 @@ import test.com.selfdefineview.coordinate.CoordinatorActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
 import test.com.selfdefineview.excel.ExcelActivity;
 import test.com.selfdefineview.textinputlayout.TextInputActivity;
+import test.com.selfdefineview.updateapk.UpdateActivity;
 import test.com.selfdefineview.webviewtxt.WebViewDocActivity;
 import test.com.selfdefineview.wifi.WifiActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
@@ -153,6 +154,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void enterXiaoKongtu14(View view){
         Intent intent = new Intent(MainActivity.this, WebViewDocActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入底部导航栏页面
+     * @param view
+     */
+    public void enterXiaoKongtu15(View view){
+        Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
         startActivity(intent);
     }
 

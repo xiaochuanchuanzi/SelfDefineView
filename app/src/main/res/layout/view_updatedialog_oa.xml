@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/fenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/btn_white_10"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="95dp"
+                    android:text="发现新版本!"
+                    android:textColor="@color/green_qb"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/view_updatedialog_contentTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/default_text"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/view_updatedialog_okTextView"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/btn_green_100"
+                    android:gravity="center"
+                    android:text="立即更新"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/view_updatedialog_cancelTextView"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="暂不更新"
+                    android:textColor="@color/word_gray6"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:src="@mipmap/update_dialog_bg" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fenLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_white_10"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/progressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/view_updatedialog_pb"
+                    style="@style/progress_horizontal_black_s"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1.0"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/progressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/default_text" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/view_updatedialog_installTextView"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="安装"
+                android:textColor="@color/default_text"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

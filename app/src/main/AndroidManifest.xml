@@ -62,6 +62,8 @@
         <!--webview显示不同格式的文件-->
         <activity android:name=".webviewtxt.WebViewDocActivity"/>
         <activity android:name=".webviewtxt.FileDisplayActivity"/>
+        <!--更新下载App-->
+        <activity android:name=".updateapk.UpdateActivity"/>
     </application>
 
 </manifest>
