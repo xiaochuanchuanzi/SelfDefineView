@@ -1,5 +1,4 @@
 package test.com.selfdefineview.excel;
-
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
@@ -27,15 +26,14 @@ import jxl.write.WriteException;
 import me.zhouzhuo.zzexcelcreator.ZzExcelCreator;
 import me.zhouzhuo.zzexcelcreator.ZzFormatCreator;
 import test.com.selfdefineview.R;
+import test.com.selfdefineview.util.PermissionManager;
 
+import static test.com.selfdefineview.util.PermissionManager.PERMISSIONCODE;
+import static test.com.selfdefineview.util.PermissionManager.SD1;
 /**
- * Created by zhangsixia on 18/5/22.
  * 已修改的Excel表格功能
  */
-
-public class ExcelActivity extends AppCompatActivity {
-
-
+public class ExcelActivity extends AppCompatActivity{
     /**
      * Excel保存路径
      */
@@ -43,53 +41,51 @@ public class ExcelActivity extends AppCompatActivity {
     private String fileName = "我的领导";
     private String sheetName = "sheet01";
     private Button btnCreate;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.excel_layout);
         assignViews();
     }
-
-    private void assignViews() {
+    void assignViews() {
         btnCreate = findViewById(R.id.btn_create);
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (Build.VERSION.SDK_INT >= 23) {
                     if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0x01);
+                        PermissionManager.checkPermission(ExcelActivity.this,SD1);
                     } else {
-                        new MyAsyncTask().execute();
-                        new MyAsyncTask2().execute();
-                        new MyAsyncTask3().execute();
+                        excute();
                     }
                 } else {
-                    new MyAsyncTask().execute();
-                    new MyAsyncTask2().execute();
-                    new MyAsyncTask3().execute();
+                    excute();
                 }
             }
         });
     }
-
     /**
      * 动态获取权限
      */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case 0x01:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    new MyAsyncTask().execute();
-                    new MyAsyncTask2().execute();
-                    new MyAsyncTask3().execute();
-                }
-                break;
+        //假设只选择了一个权限检测 grantResults这个集合的长度为1
+        if (requestCode == PERMISSIONCODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //用户同意了操作权限
+                excute();
+            } else {
+                //用户拒绝了操作权限
+                Toast.makeText(ExcelActivity.this, "权限拒绝！", Toast.LENGTH_SHORT).show();
+            }
         }
     }
-
+    void excute(){
+        new MyAsyncTask().execute();
+        new MyAsyncTask2().execute();
+        new MyAsyncTask3().execute();
+    }
     /**
      * 创建表格
      */
@@ -109,7 +105,6 @@ public class ExcelActivity extends AppCompatActivity {
             }
         }
     }
-
     /**
      * 合并单元格
      */
@@ -138,7 +133,6 @@ public class ExcelActivity extends AppCompatActivity {
             }
         }
     }
-
     /**
      * 向表格中插入数据
      */
@@ -148,17 +142,17 @@ public class ExcelActivity extends AppCompatActivity {
             List<ContentObject> strList = add();//初始化
             //插入内容
             try {
-                WritableCellFormat format = ZzFormatCreator
-                        .getInstance()
-                        .createCellFont(WritableFont.ARIAL)
-                        .setAlignment(Alignment.CENTRE, VerticalAlignment.CENTRE)
-                        .setFontSize(14)
-                        .setFontColor(Colour.DARK_GREEN)
-                        .getCellFormat();
                 for (int j = 0; j < strList.size(); j++) {
                     final String col = strList.get(j).col;
                     final String row = strList.get(j).row;
                     final String str = strList.get(j).str;
+                    WritableCellFormat format = ZzFormatCreator
+                            .getInstance()
+                            .createCellFont(WritableFont.ARIAL)
+                            .setAlignment(Alignment.CENTRE, VerticalAlignment.CENTRE)
+                            .setFontSize(14)
+                            .setFontColor(Colour.DARK_GREEN)
+                            .getCellFormat();
                     ZzExcelCreator
                             .getInstance()
                             .openExcel(new File(PATH + fileName + ".xls"))
@@ -174,7 +168,6 @@ public class ExcelActivity extends AppCompatActivity {
                 return 0;
             }
         }
-
         @Override
         protected void onPostExecute(Integer integer) {
             super.onPostExecute(integer);
@@ -185,7 +178,6 @@ public class ExcelActivity extends AppCompatActivity {
             }
         }
     }
-
     /**
      * 初始化需要插入的数据
      *
@@ -230,7 +222,6 @@ public class ExcelActivity extends AppCompatActivity {
         }
         return strList;
     }
-
     /**
      * 初始化merge表格的数据
      *
@@ -274,14 +265,12 @@ public class ExcelActivity extends AppCompatActivity {
         lists.add(merginObject1);
         return lists;
     }
-
     class MerginObject {
         public String startColum;
         public String startRow;
         public String endColum;
         public String endRow;
     }
-
     class ContentObject {
         public String col;
         public String row;
