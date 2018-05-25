@@ -156,6 +156,16 @@
             android:text="App更新"
             android:textColor="@color/black"
             android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:onClick="enterXiaoKongtu16"
+            android:text="springbar"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

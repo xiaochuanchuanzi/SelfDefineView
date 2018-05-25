@@ -1,1 +1,1 @@
-include ':app', ':excel-library'
+include ':app', ':excel-library', ':appbarspring'

@@ -17,6 +17,7 @@ import test.com.selfdefineview.coordinate.CoordinateActivity;
 import test.com.selfdefineview.coordinate.CoordinatorActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
 import test.com.selfdefineview.excel.ExcelActivity;
+import test.com.selfdefineview.springappbarlayout.SpringAppBarActivity;
 import test.com.selfdefineview.textinputlayout.TextInputActivity;
 import test.com.selfdefineview.updateapk.UpdateActivity;
 import test.com.selfdefineview.webviewtxt.WebViewDocActivity;
@@ -163,6 +164,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void enterXiaoKongtu15(View view){
         Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 点击进入底部导航栏页面
+     * @param view
+     */
+    public void enterXiaoKongtu16(View view){
+        Intent intent = new Intent(MainActivity.this, SpringAppBarActivity.class);
         startActivity(intent);
     }
 
