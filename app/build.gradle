@@ -9,6 +9,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        renderscriptSupportModeEnabled true
+
         //X5兼容64位手机
         ndk {
             abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
@@ -38,11 +40,12 @@ dependencies {
     compile project(path: ':excel-library')
     compile 'com.android.support:palette-v7:26.1.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
-
     implementation files('libs/tbs_sdk_thirdapp_v3.2.0.1104_43200_sharewithdownload_withfilereader_withoutGame_obfs_20170609_115346.jar')
     compile 'pub.devrel:easypermissions:0.4.3'
     compile 'com.squareup.okio:okio:1.11.0'
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.github.mmin18:realtimeblurview:1.0.4'
+    implementation project(':appbarspring')
 }

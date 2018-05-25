@@ -185,13 +185,14 @@ public class ExcelActivity extends AppCompatActivity{
      */
     public List<ContentObject> add() {
         List<ContentObject> strList = new ArrayList<>();
-        String[] titleArray = new String[]{"日期", "时间", "时间地点", "参与领导", "事件名称", "责任单位"};
         //标题信息
         ContentObject contentObject = new ContentObject();
         contentObject.col = "0";
         contentObject.row = "0";
         contentObject.str = "燕山办事处领导工作事项安排";
         strList.add(contentObject);
+        //单项标题
+        String[] titleArray = new String[]{"日期", "时间", "时间地点", "参与领导", "事件名称", "责任单位"};
         int position = 0;
         //导航小标题
         for (int i = 0; i < titleArray.length; i++) {
@@ -206,8 +207,11 @@ public class ExcelActivity extends AppCompatActivity{
             contentObject1.str = titleArray[i];
             strList.add(contentObject1);
         }
+        //每条数据
         String[] detailArray = new String[]{"5月7日", "周一", "14:00", "体育中心", "张主席", "调研科主任的生日", "文位"};
+        //数据的条数
         for (int w = 0; w < 5; w++) {
+            //每隔三行更换 增加一条数据
             for (int h = 3; h < 6; h++) {
                 int rrooww = h + w * 3;
                 //具体信息
@@ -224,34 +228,39 @@ public class ExcelActivity extends AppCompatActivity{
     }
     /**
      * 初始化merge表格的数据
-     *
      * @return
      */
     public List<MerginObject> merge() {
-        //第一行合并
+        //第一行合并-----标题
         List<MerginObject> lists = new ArrayList<>();
         MerginObject merginObject = new MerginObject();
         merginObject.startColum = "0";
         merginObject.startRow = "0";
         merginObject.endColum = "6";
         merginObject.endRow = "1";
-        //第二行合并
+        //第二行合并------单项标题
         MerginObject merginObject1 = new MerginObject();
         merginObject1.startColum = "0";
         merginObject1.startRow = "2";
         merginObject1.endColum = "1";
         merginObject1.endRow = "2";
+        //添加顶部已合并的表格数据
+        lists.add(merginObject);
+        lists.add(merginObject1);
+
+        //实体数据合并-----实体数据表格
         int startroow = 0;
         int endroow = 0;
         for (int j = 0; j < 5; j++) {
             startroow = j * 3 + 3;
             endroow = startroow + 2;
-            //第三行合并
+            //左边合并
             MerginObject merginObject2 = new MerginObject();
             merginObject2.startColum = "0";
             merginObject2.endColum = "0";
             merginObject2.startRow = "" + startroow;
             merginObject2.endRow = "" + endroow;
+            //右边合并
             MerginObject merginObject3 = new MerginObject();
             merginObject3.startColum = "1";
             merginObject3.endColum = "1";
@@ -260,9 +269,6 @@ public class ExcelActivity extends AppCompatActivity{
             lists.add(merginObject2);
             lists.add(merginObject3);
         }
-        //添加顶部已合并的表格数据
-        lists.add(merginObject);
-        lists.add(merginObject1);
         return lists;
     }
     class MerginObject {
