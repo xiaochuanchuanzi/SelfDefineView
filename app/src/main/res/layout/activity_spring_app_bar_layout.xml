@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="@bool/out_fits_system_windows"
-    tools:context="loopeer.com.appbarlayout_spring_extension.SpringAppBarLayoutActivity">
+    tools:context="test.com.selfdefineview.springappbarlayout.SpringAppBarLayoutActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
