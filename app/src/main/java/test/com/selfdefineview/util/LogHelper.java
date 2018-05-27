@@ -23,6 +23,14 @@ public class LogHelper {
         }
     }
 
+    public static void setLog(boolean isOpen){
+        if(isOpen){
+            canLog = true;
+        }else{
+            canLog = false;
+        }
+    }
+
     public static void Log(String tag, String msg) {
         if (canLog) {
             android.util.Log.i(tag, msg);

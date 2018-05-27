@@ -35,6 +35,7 @@ import test.com.selfdefineview.MainActivity;
 import test.com.selfdefineview.R;
 import test.com.selfdefineview.util.LogHelper;
 import test.com.selfdefineview.util.SharedPreferencesHelper;
+import test.com.selfdefineview.util.ToastHelper;
 
 /**
  * Created by 立涛 on 2018/5/27.
@@ -94,8 +95,9 @@ public class HttpUtil {
     /**
      * 于解决列表的刷新和loading同时存在的问题！
      */
-    public static <T> void doPost(final Context context, final int flag, final String url, Map<String, Object> map,
+    public static <T> void doPost(final Context context, final int flag, final String url,
                                   final boolean isShowLoading, final Class<T> clazz, final HttpCallBack httpCallBack) {
+        Map<String, Object> map = AppConstant.hashMapobj;
         //alertDialog(context);
         JSONObject Jsonobject = new JSONObject();
         List<KeyValue> paramList = new ArrayList<KeyValue>();
@@ -161,15 +163,10 @@ public class HttpUtil {
                                     JSONObject object = new JSONObject(result);
                                     if (object.getInt("ErrorCode") == 2 || object.getInt("ErrorCode") == 7) {
                                         logout(context,object);
-                                    } else if (object.getInt("ErrorCode") == 4) {
-                                        Toast.makeText(context, object.getString("ErrorMessage"), Toast.LENGTH_SHORT).show();//API内部错误
-                                    } else if (object.getInt("ErrorCode") == 8) {
-                                        Toast.makeText(context, object.getString("ErrorMessage"), Toast.LENGTH_SHORT).show();
-                                    } else if (object.getInt("ErrorCode") == 9) {//处理升级中登录app异常的问题
-                                        // alertDialog.show();
                                     } else {
                                         httpCallBack.onSuccess(flag, result, gson.fromJson(result, clazz));
                                     }
+                                    ToastHelper.showToastCenterNow(object.getString("ErrorMessage"));
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }

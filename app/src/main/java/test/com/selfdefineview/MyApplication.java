@@ -6,6 +6,7 @@ import android.os.Environment;
 import com.tencent.smtt.sdk.QbSdk;
 
 import test.com.selfdefineview.util.AppInfo;
+import test.com.selfdefineview.util.LogHelper;
 import test.com.selfdefineview.webviewtxt.ExceptionHandler;
 
 /**
@@ -32,6 +33,9 @@ public class MyApplication extends Application {
         //初始化TBS
         QbSdk.initX5Environment(this,null);
         ExceptionHandler.getInstance().initConfig(this);
+
+        //设置log信息状态
+        LogHelper.setLog(true);
 
     }
 }
