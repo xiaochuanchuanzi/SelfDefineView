@@ -77,4 +77,12 @@
     <color name="homecolor1">#1a5cc0 </color>
     <color name="color_red">#FF5722</color>
     <color name="black_home">#484848</color>
+
+
+    <!--底部选择dialog-->
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="recharge_title_backgroud">#f4f7fd</color>
 </resources>

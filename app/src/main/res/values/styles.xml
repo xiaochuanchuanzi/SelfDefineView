@@ -70,4 +70,22 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 
+<!--加载动画-->
+    <style name="task_progress_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 标题栏 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 自身浮动 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 半透明的背景遮罩 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 无背景 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
 </resources>
