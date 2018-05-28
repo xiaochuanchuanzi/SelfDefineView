@@ -33,10 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Fresco.initialize(this);
         setContentView(R.layout.lineanimator_layout);
-
         imageView = (SimpleDraweeView) findViewById(R.id.imageView);
         textView = (TextView) findViewById(R.id.textView);
-
         textView.setText(text);
         imageView.setImageURI(imageUrl);
         imageView.setOnClickListener(new View.OnClickListener() {
