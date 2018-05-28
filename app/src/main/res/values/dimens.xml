@@ -27,5 +27,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
 
+    <dimen name="min_length">12dp</dimen>
+    <dimen name="subtitle_margin">16dp</dimen>
     <!--<dimen name="card_margin">0dp</dimen>-->
 </resources>

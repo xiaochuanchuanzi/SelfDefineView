@@ -17,9 +17,6 @@
 
     <!--模糊效果的权限-->
     <uses-sdk tools:overrideLibrary="com.github.mmin18.realtimeblurview"/>
-
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,12 +24,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".lineanimator.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lineanimator.DetailActivity"
+            android:theme="@style/AppTheme.NoActionBars"/>
+
         <!--自定义销控图-->
         <activity android:name=".xiaokongtu.activity.XiaoKongTuActivity"/>
         <!--自定义销控图2-->
