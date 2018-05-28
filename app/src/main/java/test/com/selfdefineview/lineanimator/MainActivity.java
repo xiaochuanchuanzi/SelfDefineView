@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ScreenUtils.init(app);
         Fresco.initialize(this);
         setContentView(R.layout.lineanimator_layout);
 

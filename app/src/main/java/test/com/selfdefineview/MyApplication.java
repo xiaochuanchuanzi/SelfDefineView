@@ -3,8 +3,10 @@ package test.com.selfdefineview;
 import android.app.Application;
 import android.os.Environment;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.tencent.smtt.sdk.QbSdk;
 
+import test.com.selfdefineview.lineanimator.ScreenUtils;
 import test.com.selfdefineview.util.AppInfo;
 import test.com.selfdefineview.util.LogHelper;
 import test.com.selfdefineview.webviewtxt.ExceptionHandler;
@@ -26,6 +28,8 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         app = this;
+
+        ScreenUtils.init(app);
 
         //初始化app基本信息
         AppInfo.init(app);
