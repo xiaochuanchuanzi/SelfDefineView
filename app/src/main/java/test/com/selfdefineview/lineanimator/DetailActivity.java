@@ -40,9 +40,6 @@ import test.com.selfdefineview.wifi.WifiActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
 
-/**
- * 主页Activity
- */
 public class DetailActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener, SimpleAdapter.OnItemClick {
     public final static String VIEW_NAME_HEADER_IMAGE = "header_image";
     public final static String VIEW_NAME_HEADER_TITLE = "header_title";

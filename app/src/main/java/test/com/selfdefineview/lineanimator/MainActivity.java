@@ -18,9 +18,10 @@ import java.util.List;
 import test.com.selfdefineview.R;
 
 import static test.com.selfdefineview.MyApplication.app;
-
+/**
+ * 主页Activity
+ */
 public class MainActivity extends AppCompatActivity {
-
     SimpleDraweeView imageView;
     TextView textView;
 
