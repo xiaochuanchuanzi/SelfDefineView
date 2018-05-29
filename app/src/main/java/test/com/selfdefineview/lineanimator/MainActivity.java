@@ -16,8 +16,6 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import java.util.List;
 
 import test.com.selfdefineview.R;
-
-import static test.com.selfdefineview.MyApplication.app;
 /**
  * 主页Activity
  */
@@ -32,10 +30,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //初始化Fresco框架---SimpleDraweeView是Fresco框架的组件-----需要在加载布局之前进行初始化的操作
         Fresco.initialize(this);
         setContentView(R.layout.lineanimator_layout);
-        imageView = (SimpleDraweeView) findViewById(R.id.imageView);
-        textView = (TextView) findViewById(R.id.textView);
+        imageView = findViewById(R.id.imageView);
+        textView = findViewById(R.id.textView);
         textView.setText(text);
         imageView.setImageURI(imageUrl);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -51,9 +50,34 @@ public class MainActivity extends AppCompatActivity {
                                 new Pair<View, String>(imageView, DetailActivity.VIEW_NAME_HEADER_IMAGE),
                                 new Pair<View, String>(textView, DetailActivity.VIEW_NAME_HEADER_TITLE));
                 ActivityCompat.startActivityForResult(MainActivity.this, intent, 100, activityOptions.toBundle());
+
+                /**
+                 * 左进又出的动画
+                 */
+                /*ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeCustomAnimation(
+                        MainActivity.this,
+                        android.R.anim.slide_in_left,
+                        android.R.anim.slide_out_right);
+                ActivityCompat.startActivityForResult(MainActivity.this, intent,100, activityOptions.toBundle());*/
+
+                /**
+                 * 从下到上的动画
+                 */
+                /*ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeScaleUpAnimation(
+                        view, 0, 0, view.getWidth(), view.getHeight());
+                ActivityCompat.startActivityForResult(MainActivity.this, intent,100, activityOptions.toBundle());*/
+
+                /**
+                 * 从中心向四周扩散的动画
+                 */
+               /* ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeThumbnailScaleUpAnimation(
+                        view, BitmapFactory.decodeResource(getResources(), R.mipmap.home_ad_close), view.getWidth()/2, view.getHeight()/2);
+                ActivityCompat.startActivityForResult(MainActivity.this, intent,100, activityOptions.toBundle());*/
+
+
             }
         });
-        //返回到当前页面时，设置相关View可见
+        //返回到当前页面时，设置相关某些相关View可见
         setExitSharedElementCallback(new SharedElementCallback() {
             @Override
             public void onSharedElementEnd(List<String> sharedElementNames, List<View> sharedElements,

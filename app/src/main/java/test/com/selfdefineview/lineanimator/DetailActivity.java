@@ -40,6 +40,9 @@ import test.com.selfdefineview.wifi.WifiActivity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTu2Activity;
 import test.com.selfdefineview.xiaokongtu.activity.XiaoKongTuActivity;
 
+/**
+ * 列表详情页
+ */
 public class DetailActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener, SimpleAdapter.OnItemClick {
     public final static String VIEW_NAME_HEADER_IMAGE = "header_image";
     public final static String VIEW_NAME_HEADER_TITLE = "header_title";
@@ -49,15 +52,15 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
     AppBarLayout appBar;
     CollapsingToolbarLayout collapsingToolbar;
     SimpleDraweeView bgImageView;
-    SubtitleView subtitleView;
+    SubtitleView subtitleView;//自定义view
     TextView titleTextView;
     Toolbar toolbar;
-    RecyclerView recyclerView;
+    RecyclerView recyclerView;//列表
     String title;
     String backgroundImage;
     String subTitle;
     Button button;
-    List<String> list = new ArrayList<>();
+    List<String> list = new ArrayList<>();//数据集合
     private int subtitleMargin;
     private int minLength;
     private int maxTitleWidth;
@@ -77,33 +80,52 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
         subTitle = getIntent().getStringExtra(SUBTITLE);
         backgroundImage = getIntent().getStringExtra(IMAGEURL);
         button = (Button) findViewById(R.id.button);
-        list.add("点击进入销控图--自定义View组合");
-        list.add("点击进入销控图--自定义View组合在一个View内实现");
-        list.add("ConstraintLayout减少嵌套层级,实现布局优化");
-        list.add("点击进入CoordinatorLayout的学习页面1");
-        list.add("点击进入CoordinatorLayout的学习页面2");
-        list.add("点击进入WIFI页面");
-        list.add("从一个App跳转到另一个App,或者跳转到下载页面");
-        list.add("点击进入拖动时间选择页面");
-        list.add("点击进入CardView页面");
-        list.add("点击进入EXCEL表格页面");
-        list.add("点击进入Collapse页面");
-        list.add("点击进入登陆页面");
-        list.add("点击进入底部导航栏页面");
-        list.add("点击进入webView加载各种文档页面");
-        list.add("点击进入App更新页面");
-        list.add("SpringAppBarActivity页面");
-        //获取尺寸
-        subtitleMargin = getResources().getDimensionPixelSize(R.dimen.subtitle_margin);
-        minLength = getResources().getDimensionPixelSize(R.dimen.min_length);
-        maxTitleWidth = ScreenUtils.screenWidth - subtitleMargin * 2 - minLength * 2;
+        setSize();
         onAfterViews();
     }
 
-    void onAfterViews() {
+    /**
+     * 获取尺寸
+     */
+    public void setSize(){
+        subtitleMargin = getResources().getDimensionPixelSize(R.dimen.subtitle_margin);
+        minLength = getResources().getDimensionPixelSize(R.dimen.min_length);
+        maxTitleWidth = ScreenUtils.screenWidth - subtitleMargin * 2 - minLength * 2;
+    }
+
+    /**
+     * 分装数据
+     */
+    public void setData(){
+        list.add("销控图--自定义View组合");
+        list.add("销控图--自定义View组合单个View");
+        list.add("Constraint减少嵌套层级,实现布局优化");
+        list.add("CoordinatorLayout的学习页面1");
+        list.add("CoordinatorLayout的学习页面2");
+        list.add("WIFI列表页面");
+        list.add("App跳转到另一个App,跳转到下载页面");
+        list.add(" 拖动时间选择页面");
+        list.add(" CardView页面");
+        list.add(" EXCEL表格页面");
+        list.add(" Collapse页面");
+        list.add(" 登陆页面");
+        list.add(" 底部导航栏页面");
+        list.add(" webView加载各种文档页面");
+        list.add(" App更新页面");
+        list.add("SpringAppBarActivity页面");
+    }
+
+    /**
+     * 初始化控件
+     */
+    public void initWidget(){
+        //设置支持TitleBar
         setSupportActionBar(toolbar);
+        //设置显示返回按钮
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //设置颜色--为白色
         toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.MULTIPLY);
+        //点击--执行返回操作
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,6 +144,11 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
                     DraweeTransition.createTransitionSet(ScalingUtils.ScaleType.CENTER_CROP,
                             ScalingUtils.ScaleType.CENTER_CROP)); // 返回
         }
+    }
+
+    void onAfterViews() {
+        setData();
+        initWidget();
         collapsingToolbar.setTitle(" ");
         titleTextView.setText(title);
         if (!TextUtils.isEmpty(subTitle)) {
@@ -174,14 +201,17 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
         }
     }
 
+    /**
+     * 计算subtitleView
+     */
     public void calculateSubTitle() {
         int titleWidth = titleTextView.getWidth();
         if (titleWidth > maxTitleWidth) {
             titleTextView.getLayoutParams().width = maxTitleWidth;
+            titleTextView.requestLayout();
             subtitleView.getLayoutParams().width = maxTitleWidth + minLength * 2;
             subtitleView.setLength(minLength * 2);
             subtitleView.requestLayout();
-            titleTextView.requestLayout();
         } else if (subtitleView.getWidth() > ScreenUtils.screenWidth - subtitleMargin * 2) {
             subtitleView.getLayoutParams().width = ScreenUtils.screenWidth - subtitleMargin * 2;
             subtitleView.setLength(subtitleView.getLayoutParams().width - titleWidth);
@@ -195,19 +225,16 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
             subtitleView.requestLayout();
         }
     }
-
     @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
+    public void onPointerCaptureChanged(boolean hasCapture) {}
+    /**
+     * 按下返回按钮时,subtitleView隐藏
+     */
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         subtitleView.setVisibility(View.GONE);
     }
-
-
     /**
      * 跳转到另一个Activity或者跳转到下载页面
      */
@@ -238,11 +265,8 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
             startActivity(intent);
         }
     }
-
     /**
      * 点击条目进入的Acitivyt
-     *
-     * @param position
      */
     @Override
     public void setOnItemClickListener(int position) {

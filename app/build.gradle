@@ -54,5 +54,4 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
 
     compile 'com.facebook.fresco:fresco:1.4.0'
-    compile 'com.squareup.picasso:picasso:2.3.2'
 }

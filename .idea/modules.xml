@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appbarspring/appbarspring.iml" filepath="$PROJECT_DIR$/appbarspring/appbarspring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chuanSpace.iml" filepath="$PROJECT_DIR$/chuanSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/excel-library/excel-library.iml" filepath="$PROJECT_DIR$/excel-library/excel-library.iml" />
       <module fileurl="file://$PROJECT_DIR$/selfdefineview.iml" filepath="$PROJECT_DIR$/selfdefineview.iml" />
     </modules>
