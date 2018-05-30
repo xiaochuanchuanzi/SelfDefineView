@@ -65,6 +65,8 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
     private int minLength;
     private int maxTitleWidth;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -29,6 +29,8 @@ public class MyApplication extends Application {
         super.onCreate();
         app = this;
 
+        //初始化Fresco框架---SimpleDraweeView是Fresco框架的组件-----需要在加载布局之前进行初始化的操作
+        Fresco.initialize(app);
         ScreenUtils.init(app);
 
         //初始化app基本信息

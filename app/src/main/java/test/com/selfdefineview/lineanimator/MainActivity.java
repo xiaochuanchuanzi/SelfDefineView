@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
@@ -30,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //初始化Fresco框架---SimpleDraweeView是Fresco框架的组件-----需要在加载布局之前进行初始化的操作
-        Fresco.initialize(this);
         setContentView(R.layout.lineanimator_layout);
         imageView = findViewById(R.id.imageView);
         textView = findViewById(R.id.textView);
