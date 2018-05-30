@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                                 new Pair<View, String>(textView, DetailActivity.VIEW_NAME_HEADER_TITLE));
                 ActivityCompat.startActivityForResult(MainActivity.this, intent, 100, activityOptions.toBundle());
 
+
+
+
+
                 /**
                  * 左进又出的动画
                  */
