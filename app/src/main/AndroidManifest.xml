@@ -25,7 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".MyApplication">
-        <activity android:name=".lineanimator.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -77,6 +77,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".springappbarlayout.SpringAppBarLayoutWithTabActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <!--活动倒计时页面-->
+        <activity android:name=".spannable.ActiveActivity"/>
     </application>
 
 </manifest>

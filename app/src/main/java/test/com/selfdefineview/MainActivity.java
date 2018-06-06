@@ -1,4 +1,4 @@
-package test.com.selfdefineview.lineanimator;
+package test.com.selfdefineview;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
 
-import test.com.selfdefineview.R;
+import test.com.selfdefineview.lineanimator.DetailActivity;
+
 /**
  * 主页Activity
  */

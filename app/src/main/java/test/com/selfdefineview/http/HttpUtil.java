@@ -32,7 +32,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import test.com.selfdefineview.R;
-import test.com.selfdefineview.lineanimator.MainActivity;
+import test.com.selfdefineview.MainActivity;
 import test.com.selfdefineview.util.LogHelper;
 import test.com.selfdefineview.util.SharedPreferencesHelper;
 import test.com.selfdefineview.util.ToastHelper;

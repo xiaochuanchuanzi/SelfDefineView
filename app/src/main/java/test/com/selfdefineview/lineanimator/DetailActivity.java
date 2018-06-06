@@ -1,4 +1,5 @@
 package test.com.selfdefineview.lineanimator;
+
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -18,12 +19,15 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.view.DraweeTransition;
 import com.facebook.drawee.view.SimpleDraweeView;
+
 import java.util.ArrayList;
 import java.util.List;
-import test.com.selfdefineview.*;
+
+import test.com.selfdefineview.R;
 import test.com.selfdefineview.bottomnavigationview.BottomNavigationActivity;
 import test.com.selfdefineview.cardview.CardActivity;
 import test.com.selfdefineview.collapse.CollapseActivity;
@@ -32,6 +36,7 @@ import test.com.selfdefineview.coordinate.CoordinateActivity;
 import test.com.selfdefineview.coordinate.CoordinatorActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
 import test.com.selfdefineview.excel.ExcelActivity;
+import test.com.selfdefineview.spannable.ActiveActivity;
 import test.com.selfdefineview.springappbarlayout.SpringAppBarActivity;
 import test.com.selfdefineview.textinputlayout.TextInputActivity;
 import test.com.selfdefineview.updateapk.UpdateActivity;
@@ -115,6 +120,7 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
         list.add(" webView加载各种文档页面");
         list.add(" App更新页面");
         list.add("SpringAppBarActivity页面");
+        list.add("活动倒计时");
     }
 
     /**
@@ -323,7 +329,7 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
                 intent.setClass(DetailActivity.this, SpringAppBarActivity.class);
                 break;
             case 16:
-                intent.setClass(DetailActivity.this, UpdateActivity.class);
+                intent.setClass(DetailActivity.this, ActiveActivity.class);
                 break;
             default:
                 break;

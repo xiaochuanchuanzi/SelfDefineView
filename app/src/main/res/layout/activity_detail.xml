@@ -77,5 +77,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="show"
+        android:visibility="gone"
         android:layout_gravity="bottom"/>
 </android.support.design.widget.CoordinatorLayout>

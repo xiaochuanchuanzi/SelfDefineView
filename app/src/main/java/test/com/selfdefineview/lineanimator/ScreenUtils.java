@@ -55,8 +55,6 @@ public class ScreenUtils {
         return (int) (pxValue / scale + 0.5f);
     }
 
-
-
     public static float applyDimension(int unit, float value, DisplayMetrics metrics) {
         switch (unit) {
             //px：pixel
