@@ -36,6 +36,7 @@ import test.com.selfdefineview.coordinate.CoordinateActivity;
 import test.com.selfdefineview.coordinate.CoordinatorActivity;
 import test.com.selfdefineview.dragtime.DragTimeActivity;
 import test.com.selfdefineview.excel.ExcelActivity;
+import test.com.selfdefineview.selfseekbar.SeekBarActivity;
 import test.com.selfdefineview.spannable.ActiveActivity;
 import test.com.selfdefineview.springappbarlayout.SpringAppBarActivity;
 import test.com.selfdefineview.textinputlayout.TextInputActivity;
@@ -121,6 +122,7 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
         list.add(" App更新页面");
         list.add("SpringAppBarActivity页面");
         list.add("活动倒计时");
+        list.add("seekBar");
     }
 
     /**
@@ -330,6 +332,9 @@ public class DetailActivity extends AppCompatActivity implements AppBarLayout.On
                 break;
             case 16:
                 intent.setClass(DetailActivity.this, ActiveActivity.class);
+                break;
+            case 17:
+                intent.setClass(DetailActivity.this, SeekBarActivity.class);
                 break;
             default:
                 break;

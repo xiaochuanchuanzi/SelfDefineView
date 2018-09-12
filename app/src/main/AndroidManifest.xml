@@ -79,6 +79,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <!--活动倒计时页面-->
         <activity android:name=".spannable.ActiveActivity"/>
+        <!--seekbarActivity-->
+        <activity android:name=".selfseekbar.SeekBarActivity"/>
     </application>
 
 </manifest>
